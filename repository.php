@@ -35,9 +35,8 @@ function getRepositoryPath(?int $time): string
 	$time = $time ?? time(); // если переменная пустая, то ставим текущее значение времени, если нет - то оставляем как было
 
 	$fileName = date('Y-m-d', $time) . '.txt'; // сохраняем имя файла с датой
-	$filePath = ROOT . '/data/' . $fileName;
 
-	return $filePath; // запоминаем полный путь до файла с делами
+	return ROOT . '/data/' . $fileName; // запоминаем полный путь до файла с делами
 }
 
 //функция добавления тудушек в файл

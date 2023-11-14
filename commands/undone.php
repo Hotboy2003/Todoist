@@ -3,24 +3,15 @@ function undoneCommand(array $arguments)
 {
 	$todos = getTodosOrFail();
 
-	// пробегаемся по массиву переданных значений
-	foreach ($arguments as $num)
+	// функция - аналог foreach
+	$todos = mapTodos($todos, $arguments, function ($todo)
 	{
-		$index = (int)$num - 1;
-
-		// если элемента с таким индексом нет
-		if (!isset($todos[$index]))
-		{
-			continue;
-		}
-
-		// слияние существующего массива с новым (по сути переобозначение)
-		$todos[$index] = array_merge($todos[$index], [
+		return array_merge($todo, [
 			'completed' => false,
 			'updated_at' => time(),
 			'completed_at' => null,
 		]);
-	}
+	});
 
 	storeTodos($todos);
 }

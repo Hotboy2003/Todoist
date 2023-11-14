@@ -1,1 +1,0 @@
-a:2:{i:0;a:6:{s:2:"id";s:23:"655292ae247193.93637709";s:5:"title";s:7:"Wake up";s:9:"completed";b:0;s:10:"created_at";i:1699910318;s:10:"updated_at";i:1699911022;s:12:"completed_at";N;}i:1;a:6:{s:2:"id";s:23:"6552985760f731.87171307";s:5:"title";s:13:"Take a shower";s:9:"completed";b:0;s:10:"created_at";i:1699911767;s:10:"updated_at";N;s:12:"completed_at";N;}}
