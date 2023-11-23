@@ -2,8 +2,6 @@
 
 require_once __DIR__ . '/boot.php';
 
-
-
 function main(array $arguments): void
 {
 	array_shift($arguments); //убираем первый элемент массива (путь файла)

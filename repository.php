@@ -39,6 +39,14 @@ function getRepositoryPath(?int $time): string
 	return ROOT . '/data/' . $fileName; // запоминаем полный путь до файла с делами
 }
 
+function addTodo(array $todo, ?int $time=null)
+{
+	$todos = getTodos($time);
+	$todos[] = $todo; // добавляем новую задачу
+
+	storeTodos($todos); // кладем в файл
+}
+
 //функция добавления тудушек в файл
 function storeTodos(array $todos, ?int $time = null): void
 {
