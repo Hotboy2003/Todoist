@@ -14,6 +14,6 @@
 			<?= ($isHistory) ? 'disabled' : ''; ?>
 		>
 <!--		заменяем символы, которые могут быть опасными на безопасные (те же самые)-->
-		<?= safe($todo['title']); ?>
+		<?= safe(truncate($todo['title'], option('TRUNCATE_TODO', 200))); ?>
 	</label>
 </article>

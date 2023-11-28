@@ -3,6 +3,7 @@
  * @var array $todos
  * @var bool $isHistory
  * @var array $errors
+ * @var int|null $truncateTodo
  */
 ?>
 
@@ -18,7 +19,7 @@
 		<p>Nothing todo here</p>
 	<?php endif; ?>
 	<?php foreach ($todos as $todo): ?>
-		<?= view('components/todo', ['todo' => $todo, 'isHistory' => $isHistory,]); ?>
+		<?= view('components/todo', ['todo' => $todo, 'isHistory' => $isHistory, 'truncateTodo' => $truncateTodo]); ?>
 	<?php endforeach; ?>
 
 	<?php if (!$isHistory): ?>
